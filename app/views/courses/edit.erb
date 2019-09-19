@@ -1,0 +1,22 @@
+<h1>Edit <%= @course.name %></h1>
+
+<form action="/courses/<%= @course.slug %>" method="POST">
+  <input id="hidden" type="hidden" name="_method" value="PATCH">
+
+  <label for="course[name]">Course name</label><br>
+  <input type="text" name="course[name]" value="<%= @course.name %>">
+  <br>
+  <br>
+
+  <label for="course[professor]">Professor</label><br>
+  <input type="text" name="course[professor]" value="<%= @course.professor %>">
+  <br>
+  <br>
+
+  <label for="course[credits]">Credits</label><br>
+  <input type="text" name="course[credits]" value="<%= @course.credits %>">
+  <br>
+  <br>
+
+  <input type="submit" value="Save">
+</form>
