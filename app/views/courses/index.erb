@@ -1,0 +1,7 @@
+<h2>All Courses</h2>
+
+<% @courses.each do |course| %>
+    Name: <a href="/courses/<%=course.id%>"> <%=course.name%> </a> <br>
+    Professor: <%=course.professor%> <br>
+    Credits: <%=course.credits%> <br> <br>
+<% end %>

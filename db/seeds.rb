@@ -1,3 +1,5 @@
+Schedule.create( name: "Hermione" )
+
 courses = [
   {
     name: 'Transfiguration',
@@ -57,3 +59,10 @@ courses = [
     credits: 1
   }
 ]
+
+courses.each{ |course| Course.create(course) }
+
+puts "#{Course.all.length} courses created"
+puts "#{Schedule.all.length} schedule created"
+
+
